@@ -1,0 +1,26 @@
+#container{
+	width: 960px;
+	margin: auto;
+	background-color: grey;
+}
+#header{
+	background-color: pink;
+	font-size: 10em;
+	font-family: sans-serif;
+}
+
+.products{
+	width: 100%;
+}
+
+.products li{
+	float: left;
+}
+.product_img{
+	margin-top: 30px;
+	margin-left: -8px;
+}
+
+#footer{
+	background-color: lightblue;
+}
