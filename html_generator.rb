@@ -27,7 +27,6 @@ class HtmlGenerator
 
 		puts product_id.class
 		products.each do |product|
-			# puts product["id"].class
 			if product["id"] == product_id
 				puts product["name"]
 			end
