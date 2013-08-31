@@ -25,10 +25,14 @@ class HtmlGenerator
 		# #Return the actual result data from the respose, ignoring metadata
 		products = parsed_response["result"]
 
-		puts product_id.class
 		products.each do |product|
 			if product["id"] == product_id
-				puts product["name"]
+				puts "Name: #{product["name"]}"
+				puts "Primary Category: #{product["primary_category"]}"
+				puts "Secondary Category: #{product["secondary_category"]}"
+				puts "Origin: #{product["origin"]}"
+				
+
 			end
 		end	
 	end
