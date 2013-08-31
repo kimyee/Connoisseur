@@ -17,21 +17,14 @@ class HtmlGenerator
 	
 	end
 
+
 	def index
-		# puts "HtmlGenerator: index"
-		# puts @products
-
-		@products.each do |product|
-			product.each do |key, value|
-				puts "#{key} : #{value}"
-
-			end 
+		@products.each do |product| 
+			if product.has_key?("image_thumb_url")
+				puts "<div class='products'><img src='#{product["image_thumb_url"]}'></div>"	
+			end
 		end
-			
 	end
-
-
-
 
 	def show(product_id)
 		@products.each do |product|
