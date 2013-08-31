@@ -18,9 +18,20 @@ class HtmlGenerator
 	end
 
 	def index
-		puts "HtmlGenerator: index"
-		puts @products		
+		# puts "HtmlGenerator: index"
+		# puts @products
+
+		@products.each do |product|
+			product.each do |key, value|
+				puts "#{key} : #{value}"
+
+			end 
+		end
+			
 	end
+
+
+
 
 	def show(product_id)
 		@products.each do |product|
