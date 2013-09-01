@@ -57,6 +57,10 @@ body{
 	font-family: helvetica;
 }
 
+.product_img:hover .product_name{
+	color: #5D6061;
+}
+
 #footer{
 	clear: both;
 	width: 960px;
