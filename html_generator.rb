@@ -32,9 +32,9 @@ class HtmlGenerator
 		"</body>\n",
 		"</html>\n"
 		]
- 	
 	
 	end
+<<<<<<< HEAD
 	
 	def index
 		@html_start.each { |tag| puts tag}
@@ -51,6 +51,16 @@ class HtmlGenerator
 		end
 		puts "</div>"
 		@html_end.each { |tag| puts tag }
+=======
+
+
+	def index
+		@products.each do |product| 
+			if product.has_key?("image_thumb_url")
+				puts "<div class='products'><img src='#{product["image_thumb_url"]}'></div>"	
+			end
+		end
+>>>>>>> e752b7d83580e41f7072b716f68ab5645b0f732a
 	end
 
 	def show(product_id)
