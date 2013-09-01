@@ -28,39 +28,37 @@ class HtmlGenerator
 		@html_end = [
 		"</div> <!-- close product div -->\n",
 		"</div>  <!-- close container div -->\n",
-		"<div id='footer'>Footer</div> <!-- close footer div -->\n",
+		"<div id='footer'>Bringing You Happiness Since 1927</div> <!-- close footer div -->\n",
 		"</body>\n",
 		"</html>\n"
 		]
 	
 	end
-<<<<<<< HEAD
+
 	
 	def index
 		@html_start.each { |tag| puts tag}
 		puts "<div id='container'>"
-		puts	"<div id='header'>Header</div><!-- close header div -->" 
+		puts	"<div id='header'>Liquid Happiness</div><!-- close header div -->" 
 		puts	"<div class='products'>"
 
 		puts "<div class='container2'>"
 		@products.each do |product| 
 			if product.has_key?("image_thumb_url") && product.has_key?("id")
-				puts "<div class='id'>#{product['id']}</div>"
-				puts "<div class='product_img'><img src='#{product["image_thumb_url"]}'></div>"	
+				# puts "<div class='id'>#{product['id']}</div>"
+				puts "<div class='product_img'> "
+					puts " <div class='id'> "
+					puts " #{product['id']} "
+					puts "</div>"
+				puts " <img src='#{product["image_thumb_url"]}'> "
+					puts "<div class='product_name'>"
+					puts "#{product['name']}"
+					puts "</div>"
+				puts "</div>"
 			end
 		end
 		puts "</div>"
 		@html_end.each { |tag| puts tag }
-=======
-
-
-	def index
-		@products.each do |product| 
-			if product.has_key?("image_thumb_url")
-				puts "<div class='products'><img src='#{product["image_thumb_url"]}'></div>"	
-			end
-		end
->>>>>>> e752b7d83580e41f7072b716f68ab5645b0f732a
 	end
 
 	def show(product_id)
@@ -73,3 +71,7 @@ class HtmlGenerator
 		end
 	end
 end
+
+
+
+
